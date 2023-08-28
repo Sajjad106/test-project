@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Majestic Admin</title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}">
-  <link rel="stylesheet" href="{% static 'vendors/base/vendor.bundle.base.css' %}">
+  <link rel="stylesheet" href="{% static 'design/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="{% static 'design/vendors/base/vendor.bundle.base.css' %}">
   <!-- endinject -->
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'design/css/style.css' %}">
   <!-- endinject -->
   <link rel="shortcut icon" href="../../images/favicon.png" />
 </head>
@@ -24,14 +24,13 @@
     <!-- partial:../../partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="navbar-brand-wrapper d-flex justify-content-center">
-        <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-          <a class="navbar-brand brand-logo" href="../../index.html"><img src="../../images/logo.svg" alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="../../images/logo-mini.svg"
-              alt="logo" /></a>
+        <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">  
+          <a class="navbar-brand brand-logo" href="../../index.html"><img src="../../images/logo.svg" alt="logo"/></a>
+          <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="../../images/logo-mini.svg" alt="logo"/></a>
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
             <span class="mdi mdi-sort-variant"></span>
           </button>
-        </div>
+        </div>  
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <ul class="navbar-nav mr-lg-4 w-100">
@@ -42,15 +41,13 @@
                   <i class="mdi mdi-magnify"></i>
                 </span>
               </div>
-              <input type="text" class="form-control" placeholder="Search now" aria-label="search"
-                aria-describedby="search">
+              <input type="text" class="form-control" placeholder="Search now" aria-label="search" aria-describedby="search">
             </div>
           </li>
         </ul>
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item dropdown me-1">
-            <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center"
-              id="messageDropdown" href="#" data-bs-toggle="dropdown">
+            <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-bs-toggle="dropdown">
               <i class="mdi mdi-message-text mx-0"></i>
               <span class="count"></span>
             </a>
@@ -58,7 +55,7 @@
               <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
               <a class="dropdown-item">
                 <div class="item-thumbnail">
-                  <img src="../../images/faces/face4.jpg" alt="image" class="profile-pic">
+                    <img src="../../images/faces/face4.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="item-content flex-grow">
                   <h6 class="ellipsis font-weight-normal">David Grey
@@ -70,7 +67,7 @@
               </a>
               <a class="dropdown-item">
                 <div class="item-thumbnail">
-                  <img src="../../images/faces/face2.jpg" alt="image" class="profile-pic">
+                    <img src="../../images/faces/face2.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="item-content flex-grow">
                   <h6 class="ellipsis font-weight-normal">Tim Cook
@@ -82,7 +79,7 @@
               </a>
               <a class="dropdown-item">
                 <div class="item-thumbnail">
-                  <img src="../../images/faces/face3.jpg" alt="image" class="profile-pic">
+                    <img src="../../images/faces/face3.jpg" alt="image" class="profile-pic">
                 </div>
                 <div class="item-content flex-grow">
                   <h6 class="ellipsis font-weight-normal"> Johnson
@@ -95,8 +92,7 @@
             </div>
           </li>
           <li class="nav-item dropdown me-4">
-            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center notification-dropdown"
-              id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+            <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center notification-dropdown" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
               <i class="mdi mdi-bell mx-0"></i>
               <span class="count"></span>
             </a>
@@ -145,7 +141,7 @@
           </li>
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">
-              <img src="../../images/faces/face5.jpg" alt="profile" />
+              <img src="../../images/faces/face5.jpg" alt="profile"/>
               <span class="nav-profile-name">Louis Barnett</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
@@ -160,8 +156,7 @@
             </div>
           </li>
         </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
-          data-toggle="offcanvas">
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
           <span class="mdi mdi-menu"></span>
         </button>
       </div>
@@ -178,8 +173,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
-              aria-controls="ui-basic">
+            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="mdi mdi-circle-outline menu-icon"></i>
               <span class="menu-title">UI Elements</span>
               <i class="menu-arrow"></i>
@@ -187,8 +181,7 @@
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/buttons.html">Buttons</a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html">Typography</a>
-                </li>
+                <li class="nav-item"> <a class="nav-link" href="../../pages/ui-features/typography.html">Typography</a></li>
               </ul>
             </div>
           </li>
@@ -227,10 +220,8 @@
                 <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login.html"> Login </a></li>
                 <li class="nav-item"> <a class="nav-link" href="../../pages/samples/login-2.html"> Login 2 </a></li>
                 <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register.html"> Register </a></li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register-2.html"> Register 2 </a>
-                </li>
-                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/lock-screen.html"> Lockscreen </a>
-                </li>
+                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/register-2.html"> Register 2 </a></li>
+                <li class="nav-item"> <a class="nav-link" href="../../pages/samples/lock-screen.html"> Lockscreen </a></li>
               </ul>
             </div>
           </li>
@@ -243,7 +234,7 @@
         </ul>
       </nav>
       <!-- partial -->
-      <div class="main-panel">
+      <div class="main-panel">        
         <div class="content-wrapper">
           <div class="row">
             <div class="col-md-6 grid-margin stretch-card">
@@ -268,8 +259,7 @@
                     </div>
                     <div class="form-group">
                       <label for="exampleInputConfirmPassword1">Confirm Password</label>
-                      <input type="password" class="form-control" id="exampleInputConfirmPassword1"
-                        placeholder="Password">
+                      <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">
                     </div>
                     <div class="form-check form-check-flat form-check-primary">
                       <label class="form-check-label">
@@ -318,8 +308,7 @@
                     <div class="form-group row">
                       <label for="exampleInputConfirmPassword2" class="col-sm-3 col-form-label">Re Password</label>
                       <div class="col-sm-9">
-                        <input type="password" class="form-control" id="exampleInputConfirmPassword2"
-                          placeholder="Password">
+                        <input type="password" class="form-control" id="exampleInputConfirmPassword2" placeholder="Password">
                       </div>
                     </div>
                     <div class="form-check form-check-flat form-check-primary">
@@ -356,11 +345,11 @@
                     </div>
                     <div class="form-group">
                       <label for="exampleSelectGender">Gender</label>
-                      <select class="form-control" id="exampleSelectGender">
-                        <option>Male</option>
-                        <option>Female</option>
-                      </select>
-                    </div>
+                        <select class="form-control" id="exampleSelectGender">
+                          <option>Male</option>
+                          <option>Female</option>
+                        </select>
+                      </div>
                     <div class="form-group">
                       <label>File upload</label>
                       <input type="file" name="img[]" class="file-upload-default">
@@ -394,8 +383,7 @@
                   </p>
                   <div class="form-group">
                     <label>Large input</label>
-                    <input type="text" class="form-control form-control-lg" placeholder="Username"
-                      aria-label="Username">
+                    <input type="text" class="form-control form-control-lg" placeholder="Username" aria-label="Username">
                   </div>
                   <div class="form-group">
                     <label>Default input</label>
@@ -403,8 +391,7 @@
                   </div>
                   <div class="form-group">
                     <label>Small input</label>
-                    <input type="text" class="form-control form-control-sm" placeholder="Username"
-                      aria-label="Username">
+                    <input type="text" class="form-control form-control-sm" placeholder="Username" aria-label="Username">
                   </div>
                 </div>
               </div>
@@ -414,7 +401,7 @@
                 <div class="card-body">
                   <h4 class="card-title">Select size</h4>
                   <p class="card-description">
-                    Add classes like <code>.form-control-lg</code> and <code>.form-control-sm</code>.
+                    Add classes like <code>.form-control-lg</code> and <code>.form-control-sm</code>.                    
                   </p>
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Large select</label>
@@ -488,8 +475,7 @@
                   </div>
                   <div class="form-group">
                     <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Recipient's username"
-                        aria-label="Recipient's username">
+                      <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username">
                       <div class="input-group-append">
                         <button class="btn btn-sm btn-primary" type="button">Search</button>
                       </div>
@@ -498,8 +484,7 @@
                   <div class="form-group">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button"
-                          data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                        <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
                         <div class="dropdown-menu">
                           <a class="dropdown-item" href="#">Action</a>
                           <a class="dropdown-item" href="#">Another action</a>
@@ -513,8 +498,7 @@
                   </div>
                   <div class="form-group">
                     <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Find in facebook"
-                        aria-label="Recipient's username">
+                      <input type="text" class="form-control" placeholder="Find in facebook" aria-label="Recipient's username">
                       <div class="input-group-append">
                         <button class="btn btn-sm btn-facebook" type="button">
                           <i class="mdi mdi-facebook"></i>
@@ -564,29 +548,25 @@
                         <div class="form-group">
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1"
-                                value="">
+                              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="">
                               Default
                             </label>
                           </div>
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2"
-                                value="option2" checked>
+                              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2" checked>
                               Selected
                             </label>
                           </div>
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="optionsRadios2" id="optionsRadios3"
-                                value="option3" disabled>
+                              <input type="radio" class="form-check-input" name="optionsRadios2" id="optionsRadios3" value="option3" disabled>
                               Disabled
                             </label>
                           </div>
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="optionsRadio2" id="optionsRadios4"
-                                value="option4" disabled checked>
+                              <input type="radio" class="form-check-input" name="optionsRadio2" id="optionsRadios4" value="option4" disabled checked>
                               Selected and disabled
                             </label>
                           </div>
@@ -596,8 +576,7 @@
                   </form>
                 </div>
                 <div class="card-body">
-                  <p class="card-description">Add class <code>.form-check-{color}</code> for checkbox and radio controls
-                    in theme colors</p>
+                  <p class="card-description">Add class <code>.form-check-{color}</code> for checkbox and radio controls in theme colors</p>
                   <form>
                     <div class="row">
                       <div class="col-md-6">
@@ -638,36 +617,31 @@
                         <div class="form-group">
                           <div class="form-check form-check-primary">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="ExampleRadio1" id="ExampleRadio1"
-                                checked>
+                              <input type="radio" class="form-check-input" name="ExampleRadio1" id="ExampleRadio1" checked>
                               Primary
                             </label>
                           </div>
                           <div class="form-check form-check-success">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="ExampleRadio2" id="ExampleRadio2"
-                                checked>
+                              <input type="radio" class="form-check-input" name="ExampleRadio2" id="ExampleRadio2" checked>
                               Success
                             </label>
                           </div>
                           <div class="form-check form-check-info">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="ExampleRadio3" id="ExampleRadio3"
-                                checked>
+                              <input type="radio" class="form-check-input" name="ExampleRadio3" id="ExampleRadio3" checked>
                               Info
                             </label>
                           </div>
                           <div class="form-check form-check-danger">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="ExampleRadio4" id="ExampleRadio4"
-                                checked>
+                              <input type="radio" class="form-check-input" name="ExampleRadio4" id="ExampleRadio4" checked>
                               Danger
                             </label>
                           </div>
                           <div class="form-check form-check-warning">
                             <label class="form-check-label">
-                              <input type="radio" class="form-check-input" name="ExampleRadio5" id="ExampleRadio5"
-                                checked>
+                              <input type="radio" class="form-check-input" name="ExampleRadio5" id="ExampleRadio5" checked>
                               Warning
                             </label>
                           </div>
@@ -683,14 +657,12 @@
                 <div class="card-body">
                   <h4 class="card-title">Inline forms</h4>
                   <p class="card-description">
-                    Use the <code>.form-inline</code> class to display a series of labels, form controls, and buttons on
-                    a single horizontal row
+                    Use the <code>.form-inline</code> class to display a series of labels, form controls, and buttons on a single horizontal row
                   </p>
                   <form class="form-inline">
                     <label class="sr-only" for="inlineFormInputName2">Name</label>
-                    <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2"
-                      placeholder="Jane Doe">
-
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+                  
                     <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
                     <div class="input-group mb-2 mr-sm-2">
                       <div class="input-group-prepend">
@@ -751,7 +723,7 @@
                         <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Date of Birth</label>
                           <div class="col-sm-9">
-                            <input class="form-control" placeholder="dd/mm/yyyy" />
+                            <input class="form-control" placeholder="dd/mm/yyyy"/>
                           </div>
                         </div>
                       </div>
@@ -776,8 +748,7 @@
                           <div class="col-sm-4">
                             <div class="form-check">
                               <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="membershipRadios"
-                                  id="membershipRadios1" value="" checked>
+                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios1" value="" checked>
                                 Free
                               </label>
                             </div>
@@ -785,8 +756,7 @@
                           <div class="col-sm-5">
                             <div class="form-check">
                               <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="membershipRadios"
-                                  id="membershipRadios2" value="option2">
+                                <input type="radio" class="form-check-input" name="membershipRadios" id="membershipRadios2" value="option2">
                                 Professional
                               </label>
                             </div>
@@ -865,12 +835,10 @@
         <!-- content-wrapper ends -->
         <!-- partial:../../partials/_footer.html -->
         <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a
-                href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com </a>2021</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a
-                href="https://www.bootstrapdash.com/" target="_blank"> Bootstrap dashboard </a> templates</span>
-          </div>
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+          <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash.com </a>2021</span>
+          <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Only the best <a href="https://www.bootstrapdash.com/" target="_blank"> Bootstrap dashboard  </a> templates</span>
+        </div>
         </footer>
         <!-- partial -->
       </div>
@@ -880,15 +848,15 @@
   </div>
   <!-- container-scroller -->
   <!-- plugins:js -->
-  <script src="{% static 'vendors/base/vendor.bundle.base.js'%}"></script>
+  <script src="{% static 'design/vendors/base/vendor.bundle.base.js' %}"></script>
   <!-- endinject -->
   <!-- inject:js -->
-  <script src="{% static 'js/off-canvas.js'%}"></script>
-  <script src="{% static 'js/hoverable-collapse.js'%}"></script>
-  <script src="{% static 'js/template.js' %}"></script>
+  <script src="{% static 'design/js/off-canvas.js' %}"></script>
+  <script src="{% static 'design/js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'design/js/template.js' %}"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
-  <script src="{% static 'js/file-upload.js' %}"></script>
+  <script src="../../js/file-upload.js"></script>
   <!-- End custom js for this page-->
 </body>
 
