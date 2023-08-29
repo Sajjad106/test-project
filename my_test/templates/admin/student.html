@@ -244,50 +244,51 @@
                 <div class="card-body">
                   <h4 class="card-title">Student Entry</h4>
                   
-                  <form class="forms-sample">
+                  <form class="forms-sample" method="post" action="{% url 'student_info_insert' %}">
+                    {% csrf_token %}
                     <div class="form-group">
                       <label for="exampleInputName1">Student's Name</label>
-                      <input type="text" class="form-control" id="exampleInputName1" placeholder="Enter Student's Name">
+                      <input type="text" class="form-control" id="exampleInputName1" placeholder="Enter Student's Name" name='student_name'>
                       
           
                     </div>
                     <div class="form-group">
                       <label for="exampleInputClass">Class</label>
-                      <input type="number" class="form-control" id="exampleInputClass" placeholder="Enter Mother's Name">
+                      <input type="number" class="form-control" id="exampleInputClass" placeholder="Enter Class" name="class_">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputName2">Mother's Name</label>
-                      <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter Mother's Name">
+                      <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter Mother's Name" name="mothers_name">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputName3">Father's Name</label>
-                      <input type="text" class="form-control" id="exampleInputName3" placeholder="Enter Father's Name">
+                      <input type="text" class="form-control" id="exampleInputName3" placeholder="Enter Father's Name" name="fathers_name>
                     </div>
 
                     <div class="form-group">
                       <label for="exampleInputName4">Gurdian's Name</label>
-                      <input type="text" class="form-control" id="exampleInputName4" placeholder="Enter Gurdian's Name">
+                      <input type="text" class="form-control" id="exampleInputName4" placeholder="Enter Gurdian's Name" name="gurdian_name>
                     </div>
 
                       
                     <div class="form-group">
                       <label for="exampleDateOfBirth">Date of Birth</label>
-                      <input type="date" class="form-control" id="exampleDateOfBirt" placeholder="Date of Birth">
+                      <input type="date" class="form-control" id="exampleDateOfBirt" placeholder="Date of Birth" name="date_of_birth">
                     </div>
                     <div class="form-group">
                       <label for="exampleContactNo">Contact No</label>
-                      <input type="number"class="form-control" id="exampleContactNo" placeholder="Enter Contact No"</input>
+                      <input type="number"class="form-control" id="exampleContactNo" placeholder="Enter Contact No" name="contact_no"> 
                   
                     </div>
                     <div class="form-group" >
                       <label for="examplePresentAddress">Present Address</label>
-                      <input class="form-control" id="examplePresentAddress" placeholder="Enter Present Address" row="" </input>
+                      <input class="form-control" id="examplePresentAddress" placeholder="Enter Present Address" name="persent_adress" >
                   
                     </div>
 
                     <div class="form-group" >
                       <label for="examplePermanentAddress">Permanent Address</label>
-                      <input class="form-control" id="examplePresentAddress" placeholder="Enter Permanent Address" row="" </input>
+                      <input class="form-control" id="examplePresentAddress" placeholder="Enter Permanent Address" name="permanent_adress" >
                   
                     </div>
 
