@@ -21,6 +21,6 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('studentadmin/', v.student),
+    path('studentadmin/', v.student, name= 'studentadmin'),
     path('insert/', v.insert, name='student_info_insert')
 ]

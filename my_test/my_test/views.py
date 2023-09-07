@@ -1,10 +1,11 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
+from .models import StudentEntry 
 
 def student(request):
     return render(request, 'admin/student.html') 
 def insert(request):
     student_name = request.POST.get('student_name')
-    class_ = request.POST.get('class_')
+    grades = request.POST.get('grades')
     mothers_name = request.POST.get('mothers_name')
     fathers_name = request.POST.get('fathers_name')
     gurdian_name = request.POST.get('gurdian_name')
@@ -12,34 +13,19 @@ def insert(request):
     contact_no = request.POST.get('contact_no')
     persent_adress = request.POST.get('persent_adress')
     permanent_adress = request.POST.get('permanent_adress')
-    data = [student_name, class_, mothers_name, fathers_name, gurdian_name, date_of_birth, contact_no, persent_adress, permanent_adress]
-    return HttpResponse(data)
-
-# def insert(request):
-#     class_ = request.POST.get('class_')
-#     return HttpResponse(class_)
-# def insert(request):
-#     mothers_name = request.POST.get('mothers_name')
-#     return HttpResponse(mothers_name)
-# def insert(request):
-#     fathers_name = request.POST.get('fathers_name')
-#     return HttpResponse(fathers_name)
-# def insert(request):
-#     gurdian_name = request.POST.get('gurdian_name')
-#     return HttpResponse(gurdian_name)
-# def insert(request):
-#     date_of_birth = request.POST.get('date_of_birth')
-#     return HttpResponse(date_of_birth)
-# def insert(request):
-#     contact_no = request.POST.get('contact_no')
-#     return HttpResponse(contact_no)
-# def insert(request):
-#     persent_adress = request.POST.get('persent_adress')
-#     return HttpResponse(persent_adress)
-# def insert(request):
-#     permanent_adress = request.POST.get('permanent_adress')
-#     return HttpResponse(permanent_adress)
-
+    
+    st_obj = StudentEntry()
+    st_obj.name = student_name
+    st_obj.grade = grades
+    st_obj.mothers_name = mothers_name
+    st_obj.fathers_name = fathers_name
+    st_obj.gurdians_name = gurdian_name
+    st_obj.date_of_birth = date_of_birth
+    st_obj.contact_no = contact_no
+    st_obj.peresent_adress = persent_adress
+    st_obj.permanent_adress = permanent_adress
+    st_obj.save()
+    return redirect('studentadmin')
 
   
 
