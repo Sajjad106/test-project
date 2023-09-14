@@ -3,7 +3,9 @@ from .models import StudentEntry
 from django.contrib import messages as messages
 
 def student(request):
-    return render(request, 'admin/student.html') 
+    studententry = StudentEntry.objects.all()
+    student_data = {"data":studententry}
+    return render(request, 'admin/student.html', student_data) 
 def insert(request):
     student_name = request.POST.get('student_name')
     grade = request.POST.get('grade')
