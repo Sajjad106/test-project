@@ -267,19 +267,22 @@
                       <label for="exampleInputName1">Student's Name</label>
                       <input type="text" class="form-control" id="exampleInputName1" placeholder="Enter Student's Name"
                         name='student_name'>
+                      </div>
 
+                      <div class="form-group">
+                        <label for="exampleInputGrade">Grade </label>
+                        <input type="number" class="form-control" id="exampleInputGrade" placeholder="Enter Your Grade"
+                          name="grade">
+  
+                      </div>
+  
 
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputClass">Class</label>
-                      <input type="number" class="form-control" id="exampleInputClass" placeholder="Enter Class"
-                        name="grade">
-                    </div>
                     <div class="form-group">
                       <label for="exampleInputName2">Mother's Name</label>
                       <input type="text" class="form-control" id="exampleInputName2" placeholder="Enter Mother's Name"
                         name="mothers_name">
                     </div>
+
                     <div class="form-group">
                       <label for="exampleInputName3">Father's Name</label>
                       <input type="text" class="form-control" id="exampleInputName3" placeholder="Enter Father's Name"
@@ -304,18 +307,17 @@
                         name="contact_no">
 
                     </div>
+
                     <div class="form-group">
                       <label for="examplePresentAddress">Present Address</label>
                       <input class="form-control" id="examplePresentAddress" placeholder="Enter Present Address"
                         name="present_address">
-
                     </div>
 
                     <div class="form-group">
                       <label for="examplePermanentAddress">Permanent Address</label>
                       <input class="form-control" id="examplePresentAddress" placeholder="Enter Permanent Address"
                         name="permanent_address">
-
                     </div>
 
                     <button type="submit" class="btn btn-primary me-2">Submit</button>
@@ -362,6 +364,9 @@
                           <th>
                             Permanent Address
                           </th>
+                          <th>
+                            Action
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
@@ -397,6 +402,9 @@
                           <td>
                             {{i.permanent_address}}
                           </td>
+                          <td>
+                            <a href='{% url 'edit_index' i.id %}'>Edit </a><a>Delete</a>
+                          </td> 
                         </tr>
                         {% endfor %}
                       </tbody>

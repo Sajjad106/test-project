@@ -31,9 +31,11 @@ def insert(request):
     st_obj.save()
     st = [student_name, st_obj, st_obj.mothers_name, st_obj.fathers_name, st_obj.guardians_name, st_obj.date_of_birth, st_obj.contact_no, st_obj.present_address, st_obj.permanent_address]
     
+    
     messages.success(request, "Student Information Inserted Successfully")
     
     return redirect('studentadmin')
 
-  
+def edit_index(request,id):
+    return HttpResponse (id)
 
