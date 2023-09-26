@@ -17,23 +17,47 @@ def insert(request):
     present_address = request.POST.get('present_address')
     permanent_address = request.POST.get('permanent_address')
     
-
-    if not student_name or not grade or not mothers_name or not fathers_name or not guardians_name or not date_of_birth or not contact_no or not present_address or not permanent_address:
-        messages.success(request, "All fields are required")
-    else:
-        st_obj = StudentEntry()
-        st_obj.name = student_name
-        st_obj.grade = grade
-        st_obj.mothers_name = mothers_name
-        st_obj.fathers_name = fathers_name
-        st_obj.guardians_name = guardians_name
-        st_obj.date_of_birth = date_of_birth
-        st_obj.contact_no = contact_no
-        st_obj.present_address = present_address
-        st_obj.permanent_address = permanent_address
+    data= (student_name,grade,mothers_name,fathers_name,guardians_name,date_of_birth,contact_no,present_address,permanent_address)
+    student_data = {'data': data}
+    
+    if student_data: 
+        if len(student_name)==0:
+            messages.success(request, "Student Name is required")
+        elif len(grade)==0:
+            messages.success(request, "CLass is required")
+        elif len(mothers_name)==0:
+            messages.success(request, "Mother's Name is required")
+        elif len(fathers_name)==0:
+            messages.success(request, "Father's Name is required")
+        elif len(guardians_name)==0:
+            messages.success(request, "Guardian's Name is required")
+        elif len(date_of_birth)==0:
+            messages.success(request, "Date of Birth is required")
+        elif len(contact_no)==0:
+            messages.success(request, "Contact No. is required")
+        elif len(present_address)==0:
+            messages.success(request, "Present Address is required")
+        elif len(permanent_address)==0:
+            messages.success(request, "Permanent Address is required")
+        
+                
+                
+        else:
+            st_obj = StudentEntry()
+            st_obj.name = student_name
+            st_obj.grade = grade
+            st_obj.mothers_name = mothers_name
+            st_obj.fathers_name = fathers_name
+            st_obj.guardians_name = guardians_name
+            st_obj.date_of_birth = date_of_birth
+            st_obj.contact_no = contact_no
+            st_obj.present_address = present_address
+            st_obj.permanent_address = permanent_address
    
-        st_obj.save()
-        messages.success(request, "Student Information Inserted Successfully")
+            st_obj.save()
+            messages.success(request, "Student Information Inserted Successfully")
+    else:
+        messages.success(request, 'The fields can not be empty')
     
     return redirect('studentadmin')
 
