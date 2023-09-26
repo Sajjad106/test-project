@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from .models import StudentEntry 
-from django.contrib import messages as messages
+from django.contrib import messages 
 
 def student(request):
     studententry = StudentEntry.objects.all()
@@ -17,25 +17,30 @@ def insert(request):
     present_address = request.POST.get('present_address')
     permanent_address = request.POST.get('permanent_address')
     
-    st_obj = StudentEntry()
-    
-    st_obj.name = student_name
-    st_obj.grade = grade
-    st_obj.mothers_name = mothers_name
-    st_obj.fathers_name = fathers_name
-    st_obj.guardians_name = guardians_name
-    st_obj.date_of_birth = date_of_birth
-    st_obj.contact_no = contact_no
-    st_obj.present_address = present_address
-    st_obj.permanent_address = permanent_address
-    st_obj.save()
-    st = [student_name, st_obj, st_obj.mothers_name, st_obj.fathers_name, st_obj.guardians_name, st_obj.date_of_birth, st_obj.contact_no, st_obj.present_address, st_obj.permanent_address]
-    
-    
-    messages.success(request, "Student Information Inserted Successfully")
+
+    if not student_name or not grade or not mothers_name or not fathers_name or not guardians_name or not date_of_birth or not contact_no or not present_address or not permanent_address:
+        messages.success(request, "All fields are required")
+    else:
+        st_obj = StudentEntry()
+        st_obj.name = student_name
+        st_obj.grade = grade
+        st_obj.mothers_name = mothers_name
+        st_obj.fathers_name = fathers_name
+        st_obj.guardians_name = guardians_name
+        st_obj.date_of_birth = date_of_birth
+        st_obj.contact_no = contact_no
+        st_obj.present_address = present_address
+        st_obj.permanent_address = permanent_address
+   
+        st_obj.save()
+        messages.success(request, "Student Information Inserted Successfully")
     
     return redirect('studentadmin')
 
+    
+    
+    
 def edit_index(request,id):
-    return HttpResponse (id)
+    cat_id = {'id' :id}
+    return render(request, 'admin/student_edit.html', cat_id)
 
