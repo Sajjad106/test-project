@@ -403,7 +403,8 @@
                             {{i.permanent_address}}
                           </td>
                           <td>
-                            <a href='{% url 'edit_index' i.id %}'>Edit </a><a>Delete</a>
+                            <a target="_blank" href='{% url 'edit_index' i.id %}'>Edit </a>
+                            <a target="_blank" href='{% url 'delete_index' i.id %}'>Delete</a>
                           </td> 
                         </tr>
                         {% endfor %}
