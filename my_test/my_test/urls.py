@@ -1,6 +1,6 @@
 from . import views as v 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,  include
 
 
 urlpatterns = [
@@ -10,4 +10,6 @@ urlpatterns = [
     path('edit/<int:id>', v.edit_index, name='edit_index'),
     path('delete/<int:id>', v.delete_index, name='delete_index'),
     path('update/', v.update, name='student_info_update'),
+    path('studentadmin/', v.student, name= 'studentadmin'),
+    path('batch/', include('batch.urls')),
 ]
