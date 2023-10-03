@@ -1,6 +1,8 @@
 from . import views as v 
 from django.contrib import admin
 from django.urls import path,  include
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 urlpatterns = [
@@ -12,4 +14,4 @@ urlpatterns = [
     path('update/', v.update, name='student_info_update'),
     path('studentadmin/', v.student, name= 'studentadmin'),
     path('batch/', include('batch.urls')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

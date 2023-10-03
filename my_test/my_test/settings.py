@@ -18,6 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 temp_dir = os.path.join(BASE_DIR,'templates')
 static_dir = os.path.join(BASE_DIR,'static')
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -28,6 +29,10 @@ SECRET_KEY = 'django-insecure-ee53c(03(2kl1ud(ltmrlk+n!0k9s_ih80oj-gy7kk-zxgs!5g
 DEBUG = True
 
 ALLOWED_HOSTS = []
+EDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 
 # Application definition
@@ -39,7 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'my_test'
+    'my_test',
+    'ckeditor',
+    'batch'
 ]
 
 MIDDLEWARE = [
