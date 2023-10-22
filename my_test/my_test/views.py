@@ -6,6 +6,7 @@ def student(request):
     studententry = StudentEntry.objects.all()
     student_data = {"data":studententry}
     return render(request, 'admin/student.html', student_data) 
+
 def insert(request):
     student_name = request.POST.get('student_name')
     grade = request.POST.get('grade')
@@ -75,6 +76,7 @@ def delete_index(request,id):
     st_obj.delete() #delete from table where id = id
     return redirect('studentadmin')
 
+#Student information update
 def update(request):
     student_name = request.POST.get('student_name')
     student_id = request.POST.get('student_id')

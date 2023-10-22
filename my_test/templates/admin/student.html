@@ -373,7 +373,7 @@
                         {% for i in data %}
                         <tr>
                           <td>
-                             1
+                             {{ forloop.counter}}
                           </td>
                           <td>
                             {{i.name}}
@@ -400,11 +400,8 @@
                             {{i.permanent_address}}
                           </td>
                           <td>
-                            {{i.permanent_address}}
-                          </td>
-                          <td>
-                            <a target="_blank" href='{% url 'edit_index' i.id %}'>Edit </a>
-                            <a target="_blank" href='{% url 'delete_index' i.id %}'>Delete</a>
+                            <a target="_blank" href='{% url 'edit_index' i.id %}'>Edit </a> 
+                            <a target="_blank" href='{% url 'delete_index' i.id %}'>Delete</a> 
                           </td> 
                         </tr>
                         {% endfor %}
@@ -419,29 +416,17 @@
 
       </div>
     </div>
-    <!-- content-wrapper ends -->
-    <!-- partial:../../partials/_footer.html -->
     <footer class="footer">
 
     </footer>
-    <!-- partial -->
   </div>
-  <!-- main-panel ends -->
   </div>
-  <!-- page-body-wrapper ends -->
   </div>
-  <!-- container-scroller -->
-  <!-- plugins:js -->
   <script src="{% static 'design/vendors/base/vendor.bundle.base.js' %}"></script>
-  <!-- endinject -->
-  <!-- inject:js -->
   <script src="{% static 'design/js/off-canvas.js' %}"></script>
   <script src="{% static 'design/js/hoverable-collapse.js' %}"></script>
   <script src="{% static 'design/js/template.js' %}"></script>
-  <!-- endinject -->
-  <!-- Custom js for this page-->
   <script src="../../js/file-upload.js"></script>
-  <!-- End custom js for this page-->
 </body>
 
 </html>
