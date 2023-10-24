@@ -254,8 +254,16 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Batch Information Entry</h4>
+
+                  {% if messages %}
+                  <ul class="messages">
+                      {% for message in messages %}
+                      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                      {% endfor %}
+                  </ul>
+                  {% endif %}
               
-                  <form class="forms-sample" method="post" action="{% url 'batch_info_insert' %}">
+                  <form class="forms-sample" method="post" action="{% url 'batch_info_insert' %}" enctype="multipart/form-data">
                     {% csrf_token %}
                     <div class="form-group">
                       <label for="exampleInputClass">Class</label>
@@ -359,9 +367,6 @@
                   </td>
                   <td>
                     {{i.image}}
-                  </td>
-                  <td>
-                    
                   </td>
                 </tr>
                 {% endfor %}

@@ -3,7 +3,9 @@ from django.contrib import messages
 from .models import Batch
 
 def batch(request):
-    return render(request, 'admin/batch.html')
+    data = Batch.objects.all()
+    batch_data = {'data': data}
+    return render(request, 'admin/batch.html', batch_data)
 
 def batch_insert(request):
     grade = request.POST.get('grade')
@@ -44,4 +46,5 @@ def batch_insert(request):
             batch_obj.save()
     else:
         messages.success("Batch information inserted successfully")
-    return redirect('batch/admin')
+    return redirect('batch')
+
