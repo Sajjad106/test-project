@@ -195,12 +195,97 @@
                 <ul class="nav navbar-nav">
                   <li class="active dropdown yamm-fw"> <a href="home.html" data-hover="dropdown" class="dropdown-toggle"
                       data-toggle="dropdown">Home</a> </li>
-                  
-                  <li class="dropdown yamm mega-menu"> <a href="" data-hover="dropdown"
-                      class="dropdown-toggle" data-toggle="dropdown"></a>
+                  {% for i in all_cat %}
+                  <li class="dropdown yamm mega-menu"> <a href="{% url 'product_list' i.id %}" data-hover="dropdown"
+                      class="dropdown-toggle" data-toggle="dropdown">{{i.name}}</a>
                   </li>
+                  {% endfor %}
+                  <!-- <li class="dropdown mega-menu">
+                    <a href="category.html" data-hover="dropdown" class="dropdown-toggle"
+                      data-toggle="dropdown">Electronics <span class="menu-label hot-menu hidden-xs">hot</span> </a>
+                    <ul class="dropdown-menu container">
+                      <li>
+                        <div class="yamm-content">
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
+                              <h2 class="title">Laptops</h2>
+                              <ul class="links">
+                                <li><a href="#">Gaming</a></li>
+                                <li><a href="#">Laptop Skins</a></li>
+                                <li><a href="#">Apple</a></li>
+                                <li><a href="#">Dell</a></li>
+                                <li><a href="#">Lenovo</a></li>
+                                <li><a href="#">Microsoft</a></li>
+                                <li><a href="#">Asus</a></li>
+                                <li><a href="#">Adapters</a></li>
+                                <li><a href="#">Batteries</a></li>
+                                <li><a href="#">Cooling Pads</a></li>
+                              </ul>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
+                              <h2 class="title">Desktops</h2>
+                              <ul class="links">
+                                <li><a href="#">Routers & Modems</a></li>
+                                <li><a href="#">CPUs, Processors</a></li>
+                                <li><a href="#">PC Gaming Store</a></li>
+                                <li><a href="#">Graphics Cards</a></li>
+                                <li><a href="#">Components</a></li>
+                                <li><a href="#">Webcam</a></li>
+                                <li><a href="#">Memory (RAM)</a></li>
+                                <li><a href="#">Motherboards</a></li>
+                                <li><a href="#">Keyboards</a></li>
+                                <li><a href="#">Headphones</a></li>
+                              </ul>
+                            </div>
+                           
+
+                  <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
+                    <h2 class="title">Cameras</h2>
+                    <ul class="links">
+                      <li><a href="#">Accessories</a></li>
+                      <li><a href="#">Binoculars</a></li>
+                      <li><a href="#">Telescopes</a></li>
+                      <li><a href="#">Camcorders</a></li>
+                      <li><a href="#">Digital</a></li>
+                      <li><a href="#">Film Cameras</a></li>
+                      <li><a href="#">Flashes</a></li>
+                      <li><a href="#">Lenses</a></li>
+                      <li><a href="#">Surveillance</a></li>
+                      <li><a href="#">Tripods</a></li>
+                    </ul>
+                  </div>
                   
-                  
+                  <div class="col-xs-12 col-sm-12 col-md-2 col-menu">
+                    <h2 class="title">Mobile Phones</h2>
+                    <ul class="links">
+                      <li><a href="#">Apple</a></li>
+                      <li><a href="#">Samsung</a></li>
+                      <li><a href="#">Lenovo</a></li>
+                      <li><a href="#">Motorola</a></li>
+                      <li><a href="#">LeEco</a></li>
+                      <li><a href="#">Asus</a></li>
+                      <li><a href="#">Acer</a></li>
+                      <li><a href="#">Accessories</a></li>
+                      <li><a href="#">Headphones</a></li>
+                      <li><a href="#">Memory Cards</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-4 col-menu custom-banner"> <a href="#"><img alt=""
+                        src="assets/images/banners/banner-side.png"></a> </div>
+              </div>
+             
+            </div>
+           
+            </li>
+            </ul>
+            </li> -->
+                  <!-- <li class="dropdown hidden-sm"> <a href="category.html">Health & Beauty <span
+                  class="menu-label new-menu hidden-xs">new</span> </a> </li>
+            <li class="dropdown hidden-sm"> <a href="category.html">Watches</a> </li>
+            <li class="dropdown"> <a href="contact.html">Jewellery</a> </li>
+            <li class="dropdown"> <a href="contact.html">Shoes</a> </li>
+            <li class="dropdown"> <a href="contact.html">Kids & Girls</a> </li> -->
                   <li class="dropdown"> <a href="#" class="dropdown-toggle" data-hover="dropdown"
                       data-toggle="dropdown">Pages</a>
                     <ul class="dropdown-menu pages">
@@ -361,12 +446,12 @@
               <div class="tab-pane in active" id="all">
                 <div class="product-slider">
                   <div class="owl-carousel home-owl-carousel custom-carousel owl-theme" data-item="4">
-                  
+                    {% for i,j in data_2 %}
                     <div class="item item-carousel">
                       <div class="products">
                         <div class="product">
                           <div class="product-image">
-                            <div class="image"> <a href=""><img src=""
+                            <div class="image"> <a href="{% url 'product_details' i.id %}"><img src="{{i.image.url}}"
                                   alt=""></a> </div>
                             <!-- /.image -->
 
@@ -375,11 +460,11 @@
                           <!-- /.product-image -->
 
                           <div class="product-info text-left">
-                            <h3 class="name"><a href="detail.html"></a></h3>
+                            <h3 class="name"><a href="detail.html">{{i.name}}</a></h3>
                             <div class="rating rateit-small"></div>
                             <div class="description"></div>
-                            <div class="product-price"> <span class="price">  </span> <span
-                                class="price-before-discount"></span> </div>
+                            <div class="product-price"> <span class="price"> {{j}} </span> <span
+                                class="price-before-discount">{{i.fee}}</span> </div>
                             <!-- /.product-price -->
 
                           </div>
@@ -407,7 +492,7 @@
                       </div>
                       <!-- /.products -->
                     </div>
-                    
+                    {%endfor %}
 
                     <!-- /.item -->
                     <!-- /.item -->
@@ -449,16 +534,16 @@
 
             <!-- ============================================== WIDE PRODUCTS : END ============================================== -->
             <!-- ============================================== FEATURED PRODUCTS ============================================== -->
-            
+            {% if size1 %}
             <section class="section featured-product wow fadeInUp">
               <h3 class="section-title">Featured products</h3>
               <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
-                
+                {% for i,j in data_3 %}
                 <div class="item item-carousel">
                   <div class="products">
                     <div class="product">
                       <div class="product-image">
-                        <div class="image"> <a href=""><img src=""
+                        <div class="image"> <a href="{% url 'product_details' i.id %}"><img src="{{i.image.url}}"
                               alt=""></a>
                         </div>
                         <!-- /.image -->
@@ -468,11 +553,11 @@
                       <!-- /.product-image -->
 
                       <div class="product-info text-left">
-                        <h3 class="name"><a href=""></a></h3>
+                        <h3 class="name"><a href="{% url 'product_details' i.id %}">{{i.name}}</a></h3>
                         <div class="rating rateit-small"></div>
                         <div class="description"></div>
-                        <div class="product-price"> <span class="price"> </span> <span
-                            class="price-before-discount"></span> </div>
+                        <div class="product-price"> <span class="price">{{j}} </span> <span
+                            class="price-before-discount">{{i.fee}}</span> </div>
                         <!-- /.product-price -->
 
                       </div>
@@ -500,13 +585,13 @@
                   </div>
                   <!-- /.products -->
                 </div>
-                
+                {% endfor %}
                 <!-- /.item -->
                 <!-- /.item -->
               </div>
               <!-- /.home-owl-carousel -->
             </section>
-            
+            {% endif %}
             <!-- /.section -->
             <!-- ============================================== FEATURED PRODUCTS : END ============================================== -->
             <!-- ============================================== WIDE PRODUCTS ============================================== -->
@@ -669,12 +754,12 @@
             <section class="section wow fadeInUp new-arriavls">
               <h3 class="section-title">Best Offer</h3>
               <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
-                
+                {% for i,j in data4 %}
                 <div class="item item-carousel">
                   <div class="products">
                     <div class="product">
                       <div class="product-image">
-                        <div class="image"> <a href=""><img src="{{i.image.url}}"
+                        <div class="image"> <a href="{% url 'product_details' i.id %}"><img src="{{i.image.url}}"
                               alt=""></a>
                         </div>
                         <!-- /.image -->
@@ -684,11 +769,11 @@
                       <!-- /.product-image -->
 
                       <div class="product-info text-left">
-                        <h3 class="name"><a href=""></a></h3>
+                        <h3 class="name"><a href="{% url 'product_details' i.id %}">{{i.name}}</a></h3>
                         <div class="rating rateit-small"></div>
                         <div class="description"></div>
-                        <div class="product-price"> <span class="price"> </span> <span
-                            class="price-before-discount"></span> </div>
+                        <div class="product-price"> <span class="price"> {{j}}</span> <span
+                            class="price-before-discount">{{i.fee}}</span> </div>
                         <!-- /.product-price -->
 
                       </div>
@@ -716,7 +801,7 @@
                   </div>
                   <!-- /.products -->
                 </div>
-                
+                {% endfor %}
                 <!-- /.item -->
 
                 <!-- /.item -->
