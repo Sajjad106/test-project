@@ -13,10 +13,9 @@ def batch_insert(request):
     time = request.POST.get('time')
     description = request.POST.get('description')
     fee = request.POST.get('fee')
-    discount = request.POST.get('discount')
     module = request.POST.get('module')
     image = request.FILES.get('image')
-    data = (subject, time, description, fee, discount, module, image)
+    data = (subject, time, description, fee, module, image)
     batch_data = {'data': data}
     if batch_data:
         if len(grade)==0:
@@ -40,7 +39,6 @@ def batch_insert(request):
             batch_obj.time = time
             batch_obj.description = description
             batch_obj.fee = fee
-            batch_obj.discount = discount
             batch_obj.module = module
             batch_obj.image = image
             batch_obj.save()

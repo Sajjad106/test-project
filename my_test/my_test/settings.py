@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'my_test',
     'ckeditor',
-    'batch'
+    'batch',
+    'class'
 ]
 
 MIDDLEWARE = [
