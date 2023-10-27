@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'my_test',
     'ckeditor',
     'batch',
-    'class'
+    'grades'
 ]
 
 MIDDLEWARE = [

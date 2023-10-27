@@ -15,5 +15,5 @@ urlpatterns = [
     path('update/', v.update, name='student_info_update'),
     path('studentadmin/', v.student, name= 'studentadmin'),
     path('batch/', include('batch.urls')),
-    path('class/', include('class.urls')),
+    path('class/', include('grades.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

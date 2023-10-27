@@ -1,8 +1,9 @@
 from django.db import models
-from my_test.models import StudentEntry
+from grades.models import Grade
 
 class Batch(models.Model):
     batch_id = models.AutoField(primary_key=True)
+    grades_id = models.ForeignKey(Grade, on_delete=models.CASCADE)
     grade = models.CharField(max_length=2)
     subject = models.CharField(max_length=100)
     time = models.CharField(max_length=50)
