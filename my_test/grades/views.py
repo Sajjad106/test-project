@@ -3,9 +3,9 @@ from .models import Grade
 from django.contrib import messages
 
 def class_index(request):
-    data = Grade.objects.all()
-    class_data = {'data': data}
-    return render(request, 'grades/grades.html', class_data)
+    grade_data = Grade.objects.all().order_by('-id')
+    data = {'data': grade_data}
+    return render(request, 'grades/grades.html', data)
 
 def class_insert(request):
     grade = request.POST.get('grade')
@@ -13,4 +13,3 @@ def class_insert(request):
     class_obj.grade = grade
     class_obj.save()
     return redirect('grades')
-    
